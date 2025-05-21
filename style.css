@@ -1,0 +1,249 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fc8b69;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #FF3D00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #f35a2b;
+}
+
+.profile-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  flex: 1 1 200px;
+  text-align: center;
+  background-color: #f2bbaa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 1px solid;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+}
+
+.bio {
+  font-size: 14px;
+  color: #555;
+  word-wrap: break-word;
+}
+
+.right-section {
+  flex: 2 1 300px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+.stat {
+  flex: 1;
+  background-color: #fffdfa;
+  border: 1px solid #FF3D00;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.stat div:first-child {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e65100;
+}
+
+.stat div:last-child {
+  font-size: 14px;
+  color: #555;
+}
+
+.button-container {
+  text-align: left;
+  text-decoration: none;
+}
+
+.profile-button {
+  padding: 10px 20px;
+  background-color: #FF3D00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: #f35a2b;
+}
+
+.message {
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.loader {
+  position: relative;
+  width: 64px;
+  height: 60px;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  width: 64px;
+  height: 32px;
+  border-radius: 0 0 50px 50px;
+  animation: move 0.8s linear infinite alternate;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #FF3D00;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%) rotate(0deg);
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-section {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .button-container {
+    text-align: center;
+  }
+
+  .search-bar input[type="text"] {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
