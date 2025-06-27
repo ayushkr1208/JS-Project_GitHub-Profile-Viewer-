@@ -1,7 +1,8 @@
 🚀 GitHub Profile Viewer
 A responsive and visually appealing web application that allows users to search and view GitHub profiles by entering a username. This tool displays public information fetched directly from the GitHub API, including repositories, followers, and bio, with a sleek animated UI.
 
-![landing_page](https://github.com/user-attachments/assets/b85aa529-833c-461a-8f66-a1f60edb061d)
+
+![landin_page](https://github.com/user-attachments/assets/c37e2875-cb8e-4e63-a719-b83a7082d32d)
 
 
 
