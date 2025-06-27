@@ -1,3 +1,21 @@
+// Create animated background particles
+function createParticles() {
+  const bgAnimation = document.getElementById('bgAnimation');
+  for (let i = 0; i < 15; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.width = Math.random() * 10 + 5 + 'px';
+    particle.style.height = particle.style.width;
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 6 + 's';
+    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    bgAnimation.appendChild(particle);
+  }
+}
+
+createParticles();
+
 let user = document.getElementById('userID')
 
 async function fetchApi(userid){
@@ -11,7 +29,6 @@ document.getElementById('btn').addEventListener('click',()=>{
     let userid=user.value;
     fetchApi(userid)
 })
-
 
 function displayUser(result){
   const {avatar_url, name, bio, public_repos, followers, following, html_url}= result
@@ -51,5 +68,3 @@ function displayUser(result){
         </a>
       </div>`
 }
-
-
