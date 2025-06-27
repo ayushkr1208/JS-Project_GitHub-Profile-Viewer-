@@ -55,7 +55,7 @@ Loader during data fetch
 
 Smooth transitions and responsiveness
 
-📁 GitHub-Profile-Viewer/
+📁 GitHub-Profile-Viewer
 ├── index.html       # Main HTML structure
 ├── style.css        # Styling and responsiveness
 └── script.js        # Functionality, API calls, DOM rendering
