@@ -55,10 +55,6 @@ Loader during data fetch
 
 Smooth transitions and responsiveness
 
-📁 Project Structure
-bash
-Copy
-Edit
 📁 GitHub-Profile-Viewer/
 ├── index.html       # Main HTML structure
 ├── style.css        # Styling and responsiveness
